@@ -6,26 +6,45 @@ $(function() {
    //$('.disk').on('click', function(e) {$(e).css('background-color','red')}) //this.attr('#id'));
      //var
 
-});
+ });
 
   var Disk = function(){
      this.value = null
   }
   Disk.prototype.playable = function() {
-    if(this.value === true);
+    if(this.value){
     return this.value;
-  } else { return
-    alert "choose another move";
-  };
+    } else {
+    alert ("choose another move");
+  }
+  Disk.prototype.makeMove = function() {
+     game.currentPlayer;
+     if (game.currentPlayer == player1){ game.currentPlayer = player2;
+   } else{ game.currentPlayer = player1} ;
 
+  }
+}
 
 var Table = function (){
-    /*this.disk = [];
-    this.p1 = null;
-    this.p2 = null;*/
+    this.disks = [];
+    this.currentPlayer = null;
+  }
 
-}
-  Table.prototype.checkrow = function() {
+ Table.prototype.settingDisk = function (){
+   $('.disk').forEach(function(cell){
+     this.disks.push(new Disk());
+   })
+ }
+
+var Game =
+
+
+
+
+
+
+
+/*  Table.prototype.checkrow = function() {
     var rowA,rowB,rowC,rowD,rowE,rowF;
     var colA,colB,colC,colD,colE,colF,colG;
 
@@ -47,3 +66,9 @@ var Table = function (){
 });
 
 Table .prototype.newDisk =
+*/
+//
+// playtime
+var currentPlayer:
+mydisc = new Disk
+mytable = new Table
