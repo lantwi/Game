@@ -6,39 +6,55 @@ $(function() {
    //$('.disk').on('click', function(e) {$(e).css('background-color','red')}) //this.attr('#id'));
      //var
 
- });
+    });
 
-  var Disk = function(){
-     this.value = null
-  }
-  Disk.prototype.playable = function() {
-    if(this.value){
-    return this.value;
-    } else {
-    alert ("choose another move");
-  }
-  Disk.prototype.makeMove = function() {
-     game.currentPlayer;
-     if (game.currentPlayer == player1){ game.currentPlayer = player2;
-   } else{ game.currentPlayer = player1} ;
-
-  }
-}
-
-var Table = function (){
-    this.disks = [];
-    this.currentPlayer = null;
-  }
-
- Table.prototype.settingDisk = function (){
-   $('.disk').forEach(function(cell){
-     this.disks.push(new Disk());
-   })
+     var Disk = function() {
+                this.value = null;
  }
+     Disk.prototype.playable = function() {
+     if(this.value) {
+     return this.value;
+     } else {
+      alert ("choose another move");
+      }
+  };
 
-var Game =
+      var Table = function (){
+                  this.disks = [];
+                  this.currentPlayer = $('#id').css('background-color','red');
+   }
 
+      Table.prototype.settingDisk = function (){
+      $('.disk').forEach(function(cell){
+                   this.disks.push(new Disk());
+ })
 
+      var currentPlayer = function () {
+       if (this.currentPlayer === $('#id').css('background-color','black')){
+      this.currentPlayer = $('#id').css('background-color','red')
+      } else {
+      this. currentPlayer =$('#id').css('background-color','black')
+      }
+   }
+};
+
+  var Game = {
+       table :'',
+       makeTable: function () {
+               this.table = new Table();
+      },
+      start: function () {
+             this.makeTable();
+             this.table.settingDisk();
+
+      },
+      play: function () {
+       $('#id').on('click', function() {
+        Game.;
+
+   });
+ }
+};
 
 
 
@@ -66,9 +82,9 @@ var Game =
 });
 
 Table .prototype.newDisk =
-*/
+
 //
 // playtime
 var currentPlayer:
 mydisc = new Disk
-mytable = new Table
+mytable = new Table */

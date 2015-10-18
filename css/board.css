@@ -4,36 +4,29 @@ body {
   position: relative;
 }
 
-.container{
-  width: 910px;
-  height: 0px
-  margin: 0 auto;
-  display: block;
-  background-color:pink;
-  float:none;
-
+h1 {
+  font-family: Courier, "Lucida Console", monospace;
+  font-size: 60px;
+  color: #186467;
 }
+
 
 .column{
   width:900px;
-  height:300px
-  margin: 0 auto;
+  height:100px
+  margin: 50px;
   clear: both;
-
+  float: right;
 
 
 }
 
 .disk{
-  width: 100px;
-  height: 100px;
-  margin: 5px;
+  width: 90px;
+  height: 90px;
+  margin: 3px;
   border-radius: 50%;
-  border: 3px solid green;
+  border: 5px dashed #d0808d;
   float:left;
 
-}
-
-.disk:hover{
-  border: 3px solid blue;
 }
