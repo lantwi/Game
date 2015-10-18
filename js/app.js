@@ -3,58 +3,54 @@ $(function() {
   var p1name = prompt("Please enter your name");
   var p2name = prompt("Please enter your name");
 
-   //$('.disk').on('click', function(e) {$(e).css('background-color','red')}) //this.attr('#id'));
-     //var
 
-    });
+  $('.disk').on('click', Table);
 
-     var Disk = function() {
+});
+
+
+   //Disk contructor setting value equal null if so return value of disk
+   var Disk = function() {
                 this.value = null;
- }
+                this.currentPlayer = null;
+    }
      Disk.prototype.playable = function() {
      if(this.value) {
      return this.value;
      } else {
-      alert ("choose another move");
+     alert ("choose another move");
+    }
+
+      Disk.prototype.setColor= function () {
+      if(this.currentPlayer) {
+      return (this.currentPlayer = $('#id').css('background-color','black'))
+      } else if (this.currentPlayer = $('#id').css('background-color','red')) {
+      } else {
+      this. currentPlayer =$('#id').css('background-color','black');
+
       }
   };
 
       var Table = function (){
                   this.disks = [];
-                  this.currentPlayer = $('#id').css('background-color','red');
-   }
+       }
 
       Table.prototype.settingDisk = function (){
       $('.disk').forEach(function(cell){
                    this.disks.push(new Disk());
- })
 
-      var currentPlayer = function () {
-       if (this.currentPlayer === $('#id').css('background-color','black')){
-      this.currentPlayer = $('#id').css('background-color','red')
-      } else {
-      this. currentPlayer =$('#id').css('background-color','black')
-      }
+      });
    }
+
+       Table.prototype.changeColor = function (plot) {
+         var moveDisk = this.disks[plot];
+         if (moveDisk && moveDisk.playable()) {
+              return moveDisk.setColor;
+      }
 };
 
-  var Game = {
-       table :'',
-       makeTable: function () {
-               this.table = new Table();
-      },
-      start: function () {
-             this.makeTable();
-             this.table.settingDisk();
 
-      },
-      play: function () {
-       $('#id').on('click', function() {
-        Game.;
 
-   });
- }
-};
 
 
 
