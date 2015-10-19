@@ -16,4 +16,5 @@ Having trouble with the click event tricked down to me having trouble with findi
 
 
 
-https://trello.com/b/z8sXRTSP/connect-four
+https://trello.com/b/z8sXRTSP/connect-four'
+https://www.gliffy.com/go/html5/launch?app=1b5094b0-6042-11e2-bcfd-0800200c9a66
